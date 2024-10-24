@@ -1,0 +1,35 @@
+.headerLogo {
+  width: 50px;
+  height: 50px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+.suggestedSection {
+  display: flex;
+  flex-direction: row;
+}
+.topRatedSection {
+  display: flex;
+  flex-direction: row;
+}
+.commentsSection {
+  display: flex;
+  flex-direction: row;
+}
+.salonImage {
+  width: 200px;
+  height: 150px;
+}
+.aboutUsImage {
+  width: 300px;
+  height: 300px;
+}
+.profileImage {
+  width: 50px;
+  height: 50px;
+}
