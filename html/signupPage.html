@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Захиалах цагаа сонгох хэсэг">
-
-    <title>Select Time Page</title>
+    <meta name="description" content="Бүртгүүлэх хэсэг">
+    <title>Signup</title>
 </head>
 
 <body>
@@ -34,24 +33,20 @@
         </nav>
     </header>
     <main>
-        <section class="selectTime"><label for="calendar">Огноо сонгох:</label>
-            <input type="date" id="calendar" name="calendar">
-        </section>
-        <section class="bookingSection">
-            <img src="../assets/salonImage.jpg" alt="">
-            <div class="information">
-                <h1>Barber Shop Mongolia</h1>
-                <div class="durationServices">2цаг</div>
-            </div>
-            <div class="selectedServices">
-                <ul>
-                    <li>Үс засалт</li>
-                    <li>Үс засалт</li>
-                    <li>Үс засалт</li>
-                </ul>
-            </div>
-            <button class="continueCutton"><a href="selectTime.html">Continue</a></button>
-        </section>
+        <div class="signupContainer">
+            <h2>Бүртгүүлэх</h2>
+            <form>
+                <label for="username">Хэрэглэгчийн нэр</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Нууц үг</label>
+                <input type="password" id="password" name="password" required>
+                <label for="password">Нууц үгээ давтаж хийнэ үү</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Бүртгүүлэх</button>
+            </form>
+
+        </div>
+
     </main>
     <footer>
         <ul>

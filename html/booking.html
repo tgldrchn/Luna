@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Авахыг хүсч буй үйлчилгээгээ сонгох хэсэг">
     <title>Booking Page</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="search"> <input type="text" id="nameInput">
-                <input type="text" id="locationInput">
-                <input type="date" id="dateInput">
-                <input type="time" id="timeInput">
-                <button class="buttonSearch">Search</button>
+            <img src="../assets/logo.png" alt="" class="headerLogo">
+            <div class="search"> <input type="text" id="nameInput" placeholder="Байгууллагын нэр">
+                <input type="text" id="locationInput" placeholder="байршил">
+                <input type="date" id="dateInput" placeholder="он сар өдөр">
+                <input type="time" id="timeInput" placeholder="цаг">
+                <button class="buttonSearch">Хайх</button>
             </div>
             <div class="headerButtonContainer">
                 <button class="buttonBusiness">Business</button>
@@ -22,29 +24,75 @@
             </div>
         </nav>
     </header>
-    <section class="servicesHeader" id="servicesHeader">
-        <nav>
-            <ul>
-                <li>Haircut</li>
-                <li>Massage</li>
-                <li>Beard</li>
-                <li>Nail</li>
-            </ul>
-        </nav>
-    </section>
-    <section class="bookingSection">
-        <img src="../assets/salonImage.jpg" alt="">
-        <div class="information">
-            <h1>Barber Shop Mongolia</h1>
-            <div class="durationServices">2h</div>
-        </div>
-        <div class="selectedServices">
-            <li>Hair Cut</li>
-            <li>Hair Cut</li>
-            <li>Hair Cut</li>
-        </div>
-        <button class="continueCutton">Continue</button>
-    </section>
+    <main>
+        <section class="servicesHeader" id="servicesHeader">
+            <h4>Сонгосон үйлчилгээ</h4>
+            <article class="servicesProfile">
+                <h3>Үс засалт</h3>
+                <div class="serviceDuration">2h 50min</div>
+                <div class="servicesPrice">70000MNT</div>
+                <button class="buttonRemove" id="buttonId1">Хасах</button>
+            </article>
+        </section>
+        <section class="addService">
+            <h4>Үйлчилгээ нэмэх</h4>
+            <button class="buttonAdd">Нэмэх</button>
+
+        </section>
+        <section class="services" id="content">
+            <article class="servicesProfile">
+                <h3>Үс засалт</h3>
+                <div class="serviceDuration">2h 50min</div>
+                <div class="servicesPrice">70000MNT</div>
+                <button class="buttonBook" id="buttonId1">Нэмэх</button>
+            </article>
+            <article class="servicesProfile">
+                <h3>Үс засалт</h3>
+                <div class="serviceDuration">2h 50min</div>
+                <div class="servicesPrice">70000MNT</div>
+                <button class="buttonBook" id="buttonId2">Нэмэх</button>
+            </article>
+            <article class="servicesProfile">
+                <h3>Үс засалт</h3>
+                <div class="serviceDuration">2h 50min</div>
+                <div class="servicesPrice">70000MNT</div>
+                <button class="buttonBook" id="buttonId3">Нэмэх</button>
+            </article>
+            <article class="servicesProfile">
+                <h3>Үс засалт</h3>
+                <div class="serviceDuration">2h 50min</div>
+                <div class="servicesPrice">70000MNT</div>
+                <button class="buttonBook" id="buttonId4">Нэмэх</button>
+            </article>
+        </section>
+        <section class="bookingSection">
+            <img src="../assets/salonImage.jpg" alt="">
+            <div class="information">
+                <h1>Barber Shop Mongolia</h1>
+                <div class="durationServices">2цаг</div>
+            </div>
+            <div class="selectedServices">
+                <ul>
+                    <li>Үс засалт</li>
+                    <li>Үс засалт</li>
+                    <li>Үс засалт</li>
+                </ul>
+            </div>
+            <button class="continueCutton"><a href="selectProfessional.html">Үргэлжлүүлэх</a></button>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="">privacy</a></li>
+            <li><a href="">term of use</a></li>
+            <li><a href="">term of services</a></li>
+        </ul>
+        <ul>
+            <li><a href="">instagram</a></li>
+            <li><a href="">facebook</a></li>
+            <li><a href="">linkedin</a></li>
+        </ul>
+    </footer>
 
 </body>
 
