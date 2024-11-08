@@ -15,9 +15,9 @@
         <nav>
             <img src="../assets/logo.png" alt="" class="headerLogo">
             <div class="headerButtonContainer">
-                <button class="buttonBusiness"><a href="./booking.html">Business</a></button>
+                <button class="buttonMenu"><a href="./booking.html">Business</a></button>
                 <div class="dropdownMenu">
-                    <button class="dropbtn">Menu</button>
+                    <button class="buttonMenu">Menu</button>
                     <div class="dropdown-content">
                         <a href="loginPage.html">Нэвтрэх</a>
                         <a href="signupPage.html">Бүртгүүлэх</a>
@@ -30,12 +30,14 @@
     </header>
     <main>
         <section class="searchSection" id="searchSection">
-            <h1>Хүссэн үйлчилгээгээ хүссэн газраасаа захиалаарай</h1>
-            <audio controls>
-                <source src="audiofile.mp3" type="audio/mpeg">
-            </audio>
-
-            <div class="search"> <input type="text" id="nameInput" placeholder="Байгууллагын нэр">
+            <div class="titleContainer">
+                <h1>Хүссэн үйлчилгээгээ хүссэн газраасаа захиалаарай</h1>
+                <audio controls>
+                    <source src="audiofile.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="search">
+                <input type="text" id="nameInput" placeholder="Байгууллагын нэр">
                 <input type="text" id="locationInput" placeholder="байршил">
                 <input type="date" id="dateInput" placeholder="он сар өдөр">
                 <input type="time" id="timeInput" placeholder="цаг">
@@ -46,73 +48,88 @@
             <h2>Санал болгох</h2>
             <div class="articlesContainer">
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
-
             </div>
         </section>
         <section class="topRatedSection" id="topRatedSection">
             <h2>Өндөр үнэлгээтэй</h2>
             <div class="articlesContainer">
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
                 <a href="serviceProfile.html">
-                    <article>
+                    <article class="articleSalon">
                         <img src="../assets/salonImage.jpg" alt="" class="salonImage">
-                        <div class="salonName">Hair salon</div>
-                        <div class="salonRating">4.3</div>
-                        <div class="salonAddresss">Ulaanbaater, SBD district, 14 khoroo</div>
+                        <div class="articleDescription">
+                            <div class="salonName">Hair salon</div>
+                            <div class="salonRating">4.3</div>
+                            <div class="salonAddress">Ulaanbaater, SBD district, 14 khoroo</div>
+                        </div>
                     </article>
                 </a>
 
@@ -120,36 +137,40 @@
 
         </section>
         <section class="aboutUsSection" id="content">
-            <h2>Бидний тухай</h2>
-            <div class="aboutUsParagraph">Бид таны цагийг хэмнэж та хүссэн үйлчилгээгээ хаанаас ч захиалан цаг авч
-                үйлчлүүлэх боломжийг олгох болно.</div>
-            <div class="aboutUsImgContainer">
-                <img src="../assets/image2.jpg" alt="aboutUsImage" class="aboutUsImage" />
-                <img src="../assets/image2.jpg" alt="aboutUsImage" class="aboutUsImage" />
+            <div class="aboutUsBody">
+                <div class="aboutUsParagraph">
+                    <h2>Бидний тухай</h2>
+                    Бид таны цагийг хэмнэж та хүссэн үйлчилгээгээ хаанаас ч захиалан цаг авч
+                    үйлчлүүлэх боломжийг олгох болно.
+                </div>
+                <div class="aboutUsImgContainer">
+                    <img src="../assets/image2.jpg" alt="aboutUsImage" class="aboutUsImageFront" />
+                    <img src="../assets/image2.jpg" alt="aboutUsImage" class="aboutUsImageBack" />
+                </div>
             </div>
         </section>
         <section class="commentsSection" id="content">
             <h2>Comments</h2>
             <div class="articlesContainer">
-                <article>
+                <article class="commentArticle">
                     <div class="topSection"> <img src="../assets/profile.jpg" alt="salon" class="profileImage">
                         <div class="profileName">Tuguldur</div>
                     </div>
                     <div class="comments">I can easily find and book places near me — I love it!</div>
                 </article>
-                <article>
+                <article class="commentArticle">
                     <div class="topSection"> <img src="../assets/profile.jpg" alt="salon" class="profileImage">
                         <div class="profileName">Tuguldur</div>
                     </div>
                     <div class="comments">I can easily find and book places near me — I love it!</div>
                 </article>
-                <article>
+                <article class="commentArticle">
                     <div class="topSection"> <img src="../assets/profile.jpg" alt="salon" class="profileImage">
                         <div class="profileName">Tuguldur</div>
                     </div>
                     <div class="comments">I can easily find and book places near me — I love it!</div>
                 </article>
-                <article>
+                <article class="commentArticle">
                     <div class="topSection"> <img src="../assets/profile.jpg" alt="salon" class="profileImage">
                         <div class="profileName">Tuguldur</div>
                     </div>
