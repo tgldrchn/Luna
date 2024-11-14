@@ -5,62 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Нэвтрэх хэсэг">
+    <link rel="stylesheet" href="../css/loginPage.css">
     <title>Login</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img src="../assets/logo.png" alt="" class="headerLogo">
-            <div class="search"> <input type="text" id="nameInput" placeholder="Байгууллагын нэр">
-                <input type="text" id="locationInput" placeholder="байршил">
-                <input type="date" id="dateInput" placeholder="он сар өдөр">
-                <input type="time" id="timeInput" placeholder="цаг">
-                <button class="buttonSearch">Хайх</button>
-            </div>
-            <div class="headerButtonContainer">
-                <button class="buttonBusiness"><a href="./booking.html">Business</a></button>
-                <div class="dropdownMenu">
-                    <button class="dropbtn">Menu</button>
-                    <div class="dropdown-content">
-                        <a href="loginPage.html">Нэвтрэх</a>
-                        <a href="signupPage.html">Бүртгүүлэх</a>
-                        <a href="#">English</a>
-                        <a href="#">Luna for Business</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
     <main>
         <div class="loginContainer">
             <h2>Нэвтрэх</h2>
             <form>
-                <label for="username">Хэрэглэгчийн нэр</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Нууц үг</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Нэвтрэх</button>
+                <input type="text" id="username" name="username" placeholder="Майл хаяг" required>
+                <input type="password" id="password" name="password" placeholder="Нууц үг" required>
+                <button type="submit"><a href="index.html">Нэвтрэх</a></button>
             </form>
-
             <p>Бүртгэлгүй бол <a href="signupPage.html">Бүртгүүлэх</a></p>
+            <p>Нууц үг мартсан бол <a href="signupPage.html">Сэргээх</a></p>
+
         </div>
-
+        <div class="imgContainer"></div>
     </main>
-    <footer>
-        <ul>
-            <li><a href="">privacy</a></li>
-            <li><a href="">term of use</a></li>
-            <li><a href="">term of services</a></li>
-        </ul>
-        <ul>
-            <li><a href="">instagram</a></li>
-            <li><a href="">facebook</a></li>
-            <li><a href="">linkedin</a></li>
-        </ul>
-    </footer>
-
-
 </body>
 
 </html>

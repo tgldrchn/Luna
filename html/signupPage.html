@@ -5,63 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Бүртгүүлэх хэсэг">
+    <link rel="stylesheet" href="../css/signupPage.css">
     <title>Signup</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img src="../assets/logo.png" alt="" class="headerLogo">
-            <div class="search"> <input type="text" id="nameInput" placeholder="Байгууллагын нэр">
-                <input type="text" id="locationInput" placeholder="байршил">
-                <input type="date" id="dateInput" placeholder="он сар өдөр">
-                <input type="time" id="timeInput" placeholder="цаг">
-                <button class="buttonSearch">Хайх</button>
-            </div>
-            <div class="headerButtonContainer">
-                <button class="buttonBusiness"><a href="./booking.html">Business</a></button>
-                <div class="dropdownMenu">
-                    <button class="dropbtn">Menu</button>
-                    <div class="dropdown-content">
-                        <a href="loginPage.html">Нэвтрэх</a>
-                        <a href="signupPage.html">Бүртгүүлэх</a>
-                        <a href="#">English</a>
-                        <a href="#">Luna for Business</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
     <main>
         <div class="signupContainer">
             <h2>Бүртгүүлэх</h2>
             <form>
-                <label for="username">Хэрэглэгчийн нэр</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Нууц үг</label>
-                <input type="password" id="password" name="password" required>
-                <label for="password">Нууц үгээ давтаж хийнэ үү</label>
-                <input type="password" id="password" name="password" required>
+                <input type="text" id="username" name="username" placeholder="майл хаяг" required>
+                <input type="password" id="password" name="password" placeholder="нууц үг">
+                <input type="password" id="password" name="password" placeholder="нууц үгээ давтана уу" required>
                 <button type="submit">Бүртгүүлэх</button>
             </form>
+            <p>Бүртгэлтэй бол <a href="loginPage.html">Нэвтрэх</a></p>
 
         </div>
-
+        <div class="imgContainer"></div>
     </main>
-    <footer>
-        <ul>
-            <li><a href="">privacy</a></li>
-            <li><a href="">term of use</a></li>
-            <li><a href="">term of services</a></li>
-        </ul>
-        <ul>
-            <li><a href="">instagram</a></li>
-            <li><a href="">facebook</a></li>
-            <li><a href="">linkedin</a></li>
-        </ul>
-    </footer>
-
-
 </body>
 
 </html>

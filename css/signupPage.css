@@ -1,0 +1,67 @@
+:root {
+  --background-color: linear-gradient(#fde5fb, rgb(245, 216, 241));
+  --navbar-color: linear-gradient(rgb(254, 144, 214), rgb(245, 216, 241));
+  --button-color: #81018c;
+  --text-color-primary: black;
+  --text-color-secondary: white;
+  --text-color-muted: gray;
+  --text-font-weight: 700;
+  --text-font-paragraph: 600;
+  --font-size-muted: 0.8rem;
+  --font-size-title: 1.5rem;
+  --button-font-size: 1rem;
+  --input-color: rgb(254, 144, 214);
+  --article-background-color: white;
+  --font-size-paragraph: 1.5rem;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.imgContainer {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-image: url("../assets/login.png");
+  background-size: contain;
+}
+.signupContainer {
+  width: 50%;
+  height: 50%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+input {
+  width: 80%;
+  height: 3rem;
+  border: 0.1rem solid grey;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+button {
+  width: 83%;
+  height: 3rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--button-color);
+  color: var(--text-color-secondary);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--text-font-weight);
+}
+a {
+  text-decoration: none;
+  color: var(--text-color-secondary);
+}

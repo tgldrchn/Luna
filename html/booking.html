@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Авахыг хүсч буй үйлчилгээгээ сонгох хэсэг">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     <title>Booking Page</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <img src="../assets/logo.png" alt="" class="headerLogo">
+            <div class="logo">Luna</div>
             <div class="search"> <input type="text" id="nameInput" placeholder="Байгууллагын нэр">
                 <input type="text" id="locationInput" placeholder="байршил">
                 <input type="date" id="dateInput" placeholder="он сар өдөр">
@@ -19,27 +22,50 @@
                 <button class="buttonSearch">Хайх</button>
             </div>
             <div class="headerButtonContainer">
-                <button class="buttonBusiness">Business</button>
-                <button class="buttonMenu">Menu</button>
+                <button class="buttonBusiness"><a href="./booking.html">Business</a></button>
+                <div class="dropdownMenu">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="loginPage.html">Нэвтрэх</a>
+                        <a href="signupPage.html">Бүртгүүлэх</a>
+                        <a href="#">English</a>
+                        <a href="#">Luna for Business</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <section class="servicesHeader" id="servicesHeader">
             <h4>Сонгосон үйлчилгээ</h4>
-            <article class="servicesProfile">
-                <h3>Үс засалт</h3>
-                <div class="serviceDuration">2h 50min</div>
-                <div class="servicesPrice">70000MNT</div>
-                <button class="buttonRemove" id="buttonId1">Хасах</button>
-            </article>
+            <div class="articlesContainer">
+                <article class="servicesProfile">
+                    <h3>Үс засалт</h3>
+                    <div class="serviceDuration">2h 50min</div>
+                    <div class="servicesPrice">70000MNT</div>
+                    <button class="buttonRemove" id="buttonId1">Хасах</button>
+                </article>
+                <article class="servicesProfile">
+                    <h3>Үс засалт</h3>
+                    <div class="serviceDuration">2h 50min</div>
+                    <div class="servicesPrice">70000MNT</div>
+                    <button class="buttonRemove" id="buttonId1">Хасах</button>
+                </article>
+                <article class="servicesProfile">
+                    <h3>Үс засалт</h3>
+                    <div class="serviceDuration">2h 50min</div>
+                    <div class="servicesPrice">70000MNT</div>
+                    <button class="buttonRemove" id="buttonId1">Хасах</button>
+                </article>
+            </div>
         </section>
         <section class="addService">
             <h4>Үйлчилгээ нэмэх</h4>
-            <button class="buttonAdd">Нэмэх</button>
-
+            <article class="servicesProfile">
+                <button class="buttonAdd">Нэмэх</button>
+            </article>
         </section>
-        <section class="services" id="content">
+        <!-- <section class="services" id="content">
             <article class="servicesProfile">
                 <h3>Үс засалт</h3>
                 <div class="serviceDuration">2h 50min</div>
@@ -64,24 +90,60 @@
                 <div class="servicesPrice">70000MNT</div>
                 <button class="buttonBook" id="buttonId4">Нэмэх</button>
             </article>
-        </section>
-        <section class="bookingSection">
-            <img src="../assets/salonImage.jpg" alt="">
-            <div class="information">
-                <h1>Barber Shop Mongolia</h1>
-                <div class="durationServices">2цаг</div>
+        </section> -->
+        <aside class="aside">
+            <div class="bookingImgContainer">
+                <img src="../assets/salonImage.jpg" alt="">
+                <div class="information">
+                    <div class="classTitle">Barber Shop Mongolia</div>
+                    <div class="address">Хан уул дүүрэг 12-р хороо</div>
+                </div>
             </div>
             <div class="selectedServices">
-                <ul>
-                    <li>Үс засалт</li>
-                    <li>Үс засалт</li>
-                    <li>Үс засалт</li>
-                </ul>
+                <div class="lists">
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Будалтгүй педикур</span>
+                                <span class="price">40000</span>
+                            </div>
+                            <div class="duration">2цаг 30мин</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Будалтгүй педикур</span>
+                                <span class="price">40000</span>
+                            </div>
+                            <div class="duration">2цаг 30мин</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Будалтгүй педикур</span>
+                                <span class="price">40000</span>
+                            </div>
+                            <div class="duration">2цаг 30мин</div>
+                        </div>
+                    </li>
+                    <hr>
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Нийт</span>
+                                <span class="price">120000</span>
+                            </div>
+                        </div>
+                    </li>
+                </div>
             </div>
-            <button class="continueCutton"><a href="selectProfessional.html">Үргэлжлүүлэх</a></button>
-        </section>
+            <button class="continueButton"><a href="selectProfessional.html">Үргэлжлүүлэх</a></button>
+        </aside>
     </main>
     <footer>
+        <div class="logo">Luna</div>
         <ul>
             <li><a href="">privacy</a></li>
             <li><a href="">term of use</a></li>
@@ -93,7 +155,6 @@
             <li><a href="">linkedin</a></li>
         </ul>
     </footer>
-
 </body>
 
 </html>

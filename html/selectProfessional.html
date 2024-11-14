@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Үйлчлүүлэх ажилтнаа сонгох хэсэг">
+    <link rel="stylesheet" href="../css/selectProfessional.css">
     <title>Select Professional</title>
 </head>
 
@@ -25,45 +26,84 @@
         </nav>
     </header>
     <main>
-        <h1>Үйлчлүүлэх ажилтнаа сонгоно уу</h1>
-        <section class="servicesHeader" id="servicesHeader">
-            <h4>Сонгосон үйлчилгээ</h4>
-            <article class="servicesProfile">
-                <h3>Үс засалт</h3>
-                <div class="serviceDuration">2h 50min</div>
-                <div class="servicesPrice">70000MNT</div>
-                <button class="buttonRemove" id="buttonId1">Cонгох</button>
-            </article>
-        </section>
-        <section class="teamSection">
-            <h2>Ажилтнууд</h2>
-            <article class="employeeProfile">
-                <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
-                <div class="employeeName">Any Professional</div>
-            </article>
-            <article class="employeeProfile">
-                <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
-                <div class="employeeName">Tuguldur</div>
-            </article>
-        </section>
+        <div class="leftContainer">
+            <h4>Үйлчлүүлэх ажилтнаа сонгоно уу</h4>
+            <section class="servicesHeader" id="servicesHeader">
+                <h4>Сонгосон үйлчилгээ</h4>
+                <article class="servicesProfile">
+                    <h3>Үс засалт</h3>
+                    <div class="serviceDuration">2h 50min</div>
+                    <div class="servicesPrice">70000MNT</div>
+                    <button class="buttonRemove" id="buttonId1">Cонгох</button>
+                </article>
+            </section>
+            <section class="teamSection">
+                <h2>Ажилтнууд</h2>
+                <div class="articlesContainer">
+                    <article class="employeeProfile">
+                        <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
+                        <div class="employeeName">Any Professional</div>
+                    </article>
+                    <article class="employeeProfile">
+                        <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
+                        <div class="employeeName">Tuguldur</div>
+                    </article>
+                </div>
+            </section>
+        </div>
 
-        <section class="bookingSection">
-            <img src="../assets/salonImage.jpg" alt="">
-            <div class="information">
-                <h1>Barber Shop Mongolia</h1>
-                <div class="durationServices">2цаг</div>
+        <aside class="aside">
+            <div class="bookingImgContainer">
+                <img src="../assets/salonImage.jpg" alt="">
+                <div class="information">
+                    <div class="classTitle">Barber Shop Mongolia</div>
+                    <div class="address">Хан уул дүүрэг 12-р хороо</div>
+                </div>
             </div>
             <div class="selectedServices">
-                <ul>
-                    <li>Үс засалт</li>
-                    <li>Үс засалт</li>
-                    <li>Үс засалт</li>
-                </ul>
+                <div class="lists">
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Будалтгүй педикур</span>
+                                <span class="price">40000</span>
+                            </div>
+                            <div class="duration">2цаг 30мин</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Будалтгүй педикур</span>
+                                <span class="price">40000</span>
+                            </div>
+                            <div class="duration">2цаг 30мин</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Будалтгүй педикур</span>
+                                <span class="price">40000</span>
+                            </div>
+                            <div class="duration">2цаг 30мин</div>
+                        </div>
+                    </li>
+                    <hr>
+                    <li>
+                        <div class="serviceList">
+                            <div class="priceInfo">
+                                <span class="serviveType">Нийт</span>
+                                <span class="price">120000</span>
+                            </div>
+                        </div>
+                    </li>
+                </div>
             </div>
-            <button class="continueCutton"><a href="selectTime.html">Үргэлжлүүлэх</a></button>
-        </section>
+            <button class="continueButton"><a href="selectProfessional.html">Үргэлжлүүлэх</a></button>
+        </aside>
     </main>
-    <footer>
+    <!-- <footer>
         <ul>
             <li><a href="">privacy</a></li>
             <li><a href="">term of use</a></li>
@@ -74,7 +114,7 @@
             <li><a href="">facebook</a></li>
             <li><a href="">linkedin</a></li>
         </ul>
-    </footer>
+    </footer> -->
 
 </body>
 

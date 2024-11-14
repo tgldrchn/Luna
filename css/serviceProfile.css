@@ -1,6 +1,8 @@
 :root {
-  --background-color: linear-gradient(rgb(254, 144, 214), rgb(245, 216, 241));
+  --background-color: linear-gradient(#f6e9f5, rgb(245, 216, 241));
+  --navbar-color: linear-gradient(#fde5fb, rgb(245, 216, 241));
   --button-color: #81018c;
+  --background-secondary-color: #f1aee9;
   --text-color-primary: black;
   --text-color-secondary: white;
   --text-color-muted: gray;
@@ -14,8 +16,7 @@
   --font-size-paragraph: 1.5rem;
 }
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inria Serif";
   overflow-x: hidden;
   background-image: var(--background-color);
 }
@@ -27,13 +28,13 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: var(--background-color);
+  background-image: var(--navbar-color);
 }
 nav {
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 nav button {
@@ -43,6 +44,14 @@ nav button {
   margin: 1rem;
   border: 1px solid white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--article-background-color);
+}
+h2 {
+  font-family: "lobster";
+}
+.logo {
+  font-family: "Lobster";
+  font-size: 3rem;
 }
 .buttonMenu a,
 .buttonMenu {
@@ -74,6 +83,13 @@ nav button {
   text-decoration: none;
   display: block;
 }
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdownMenu:hover .dropdown-content {
+  display: block;
+}
 .headerLogo {
   height: 5rem;
 }
@@ -102,6 +118,10 @@ nav button {
 #nameInput {
   border-top-left-radius: 10rem;
   border-bottom-left-radius: 10rem;
+}
+#timeInput {
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
 }
 input {
   border: 0px solid white;
@@ -175,11 +195,67 @@ h2 {
 .servicesHeader {
   width: 80vw;
 }
-
+.servicesHeader ul {
+  width: 50%;
+  height: 3rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-secondary-color);
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10rem;
+}
+.servicesProfile {
+  background-color: var(--article-background-color);
+  width: 15%;
+  height: 40%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.buttonBook {
+  background-color: var(--button-color);
+  width: 80%;
+  height: 2rem;
+  border: none;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+.servicesProfile div {
+  color: var(--text-color-muted);
+}
+.buttonBook a {
+  color: var(--text-color-secondary);
+}
+.employees {
+  display: flex;
+  flex-direction: row;
+}
+.employeeProfile {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.employeeProfile img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.employeeName {
+  font-weight: var(--text-font-weight);
+}
+.profession {
+  color: var(--text-color-muted);
+}
 footer {
   width: 100vw;
   height: 20vh;
-  background-image: var(--background-color);
+  background-image: var(--navbar-color);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -190,17 +266,7 @@ footer a {
   color: var(--text-color-muted);
   font-weight: var(--text-font-paragraph);
 }
-ul {
-  width: 50%;
-  height: 3rem;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  background-color: var(--button-color);
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 10rem;
-}
+
 a {
   text-decoration: none;
   color: var(--text-color-primary);
@@ -208,10 +274,103 @@ a {
 }
 .articlesContainer {
   width: 80vw;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   overflow-x: scroll;
   scrollbar-width: none;
   padding: 1rem;
+}
+.teamSection {
+  height: 40vh;
+}
+.aboutUsImage {
+  width: 50%;
+}
+.aboutUsSection {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--background-color);
+}
+.aboutUsBody {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.aboutUsParagraph {
+  width: 30%;
+  font-size: var(--font-size-paragraph);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.aboutUsImgContainer {
+  width: 50%;
+}
+.aboutUsImgContainer img {
+  width: 60%;
+  height: 60%;
+}
+.aboutUsImageFront {
+  position: relative;
+  top: 0;
+  left: 0;
+  animation-name: rotateImageFront;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+.aboutUsImageBack {
+  position: relative;
+  left: 30%;
+  top: -30%;
+  animation-name: rotateImageBack;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateImageFront {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 15%;
+  }
+  50% {
+    top: 30%;
+    left: 30%;
+  }
+  75% {
+    top: 30%;
+    left: 15%;
+  }
+}
+@keyframes rotateImageBack {
+  0% {
+    left: 30%;
+    top: -30%;
+  }
+  25% {
+    top: -30%;
+    left: 15%;
+  }
+  50% {
+    top: -30%;
+    left: 0%;
+  }
+  75% {
+    top: -60%;
+    left: 0%;
+  }
 }
