@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">LUNA</div>
+    <nav>
+        <div class="search">
+            <label for="nameInput">Үйлчилгээ:</label>
+            <input type="text" id="nameInput" placeholder="Үйлчилгээ">
+            
+            <label for="locationInput">Байршил:</label>
+            <input type="text" id="locationInput" placeholder="Байршил">
+            
+            <label for="dateInput">Өдөр:</label>
+            <input type="date" id="dateInput">
+            
+            <label for="timeInput">Цаг:</label>
+            <input type="time" id="timeInput">
+            
+            <button class="buttonSearch">Хайх</button>
+          </div>
+    </nav>
+    <div class="profile-icon">БД</div>
+  </header>
+  <main>
+    <aside>
+      <ul>
+        <li><a href="huwiin1.html">Хувийн мэдээлэл</a></li>
+        <li><a href="zahialg.html">Захиалга</a></li>
+        <li><a href="payment.html">Төлбөр</a></li>
+        <li><a href="liked.html">Таалагдсан</a></li>
+        <li><a href="settings.html" class="active">Тохиргоо</a></li>
+      </ul>
+    </aside>     
+ 
+  <div class="profile-content">
+  <div class="profile-card">
+        <h2>Миний мэдэгдэл</h2>
+    <div class="notifications">
+        <div>
+            <h4>Таны захиалга болон шинэ мэдээллүүдийг илгээх болно.</h4>
+            <label>
+                Захиалгын мэдээллийг мессежээр хүлээн авах
+                <input type="checkbox">
+            </label>
+        </div>
+        <div>
+            <label>
+                Өөрийн e-mail хаягаар хүлээн авах
+                <input type="checkbox">
+            </label>
+        </div>
+        <div>
+            <label>
+                Маркетингийн мэдээллийг мессежээр хүлээн авах
+                <input type="checkbox">
+            </label>
+        </div>
+    </div>
+   
+</div>
+<div class="profile-card">
+ <section class="internet-accounts">
+        <h2>Миний интернет хаяг</h2>
+        <button class="connect-btn">Facebook холбох</button>
+        <button class="connect-btn">Google холбох</button>
+    </section>
+</div>
+<div class="profile-card">
+    <section class="delete-account">
+        <h2>Бүртгэлийг устгах</h2>
+        <p>Та бүртгэлээ устгахдаа итгэлтэй байна уу?</p>
+        <button class="delete-btn">Delete my account</button>
+    </section>
+</div>
+</div>
+ </main>
+</body>
+</html>
