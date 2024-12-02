@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">LUNA</div>
+    <nav>
+        <div class="search">
+            <label for="nameInput">Үйлчилгээ:</label>
+            <input type="text" id="nameInput" placeholder="Үйлчилгээ">
+            
+            <label for="locationInput">Байршил:</label>
+            <input type="text" id="locationInput" placeholder="Байршил">
+            
+            <label for="dateInput">Өдөр:</label>
+            <input type="date" id="dateInput">
+            
+            <label for="timeInput">Цаг:</label>
+            <input type="time" id="timeInput">
+            
+            <button class="buttonSearch">Хайх</button>
+          </div>
+    </nav>
+    <div class="profile-icon">БД</div>
+  </header>
+  <main>
+    <aside>
+      <ul>
+        <li><a href="huwiin1.html"class="active">Хувийн мэдээлэл</a></li>
+        <li><a href="zahialg.html">Захиалга</a></li>
+        <li><a href="payment.html">Төлбөр</a></li>
+        <li><a href="liked.html">Таалагдсан</a></li>
+        <li><a href="settings.html">Тохиргоо</a></li>
+      </ul>
+    </aside>
+    <section class="profile-content">
+      <div class="profile-card">
+        <div class="profile-header">
+          <span>БД</span>
+          <button class="edit-btn">Засах</button>
+        </div>
+        <div class="profile-details">
+          <p><strong>Овог:</strong> Бат-Өлзий</p>
+          <p><strong>Нэр:</strong> Дэлгэрмаа</p>
+          <p><strong>Утасны дугаар:</strong> 80750047</p>
+          <p><strong>E-mail:</strong> deegiibat60@gmail.com</p>
+          <p><strong>Төрсөн өдөр:</strong> 2003/02/20</p>
+          <p><strong>Хүйс:</strong> Эмэгтэй</p>
+        </div>
+      </div>
+
+      <div class="address-card">
+        <h2>Миний хаяг</h2>
+        <form>
+          <label for="home-address">Гэр</label>
+          <input type="text" id="home-address" placeholder="Гэрийн хаяг нэмэх">
+
+          <label for="work-address">Ажил</label>
+          <input type="text" id="work-address" placeholder="Ажлын хаяг нэмэх">
+
+          <button type="button" class="add-btn">+ Нэмэх</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
