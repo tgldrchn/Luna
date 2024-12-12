@@ -34,6 +34,7 @@ body {
   align-items: center;
 }
 main {
+  width: 100vw;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
@@ -178,152 +179,68 @@ input {
   color: var(--text-color-secondary);
   font-weight: var(--text-font-weight);
 }
-.selectedPage {
-  font-weight: bold;
-}
 
-/* захиалгын хэсэг */
-main {
-  margin-top: 5rem;
-  height: 100vh;
+h2 {
   width: 80vw;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  font-family: "lobster";
 }
 
-aside {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  background-color: var(--article-background-color);
-  width: 50%;
-  height: 60%;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: var(--white-bg-box-shadow);
-  margin: 5rem;
-}
-
-.bookingImgContainer {
-  display: flex;
-  flex-direction: row;
-}
-.bookingImgContainer img {
-  width: 50%;
-  height: auto;
-}
-.servicesProfile {
-  background-color: var(--article-background-color);
-  box-shadow: var(--white-bg-box-shadow);
-  width: 20%;
-  height: auto;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin-right: 2rem;
-}
-.buttonRemove,
-.buttonAdd {
-  background-color: var(--button-color);
-  box-shadow: var(--white-bg-box-shadow);
-  color: var(--text-color-secondary);
+.salonsListSection {
+  margin-top: 8rem;
   width: 80%;
-  height: 2rem;
-  border: none;
-  border-radius: 2rem;
-  margin-top: 1rem;
+  min-height: 100vh;
 }
-.articlesContainer {
-  display: flex;
-  flex-direction: row;
-}
-
-.servicesProfile div {
-  color: var(--text-color-muted);
-  font-size: 0.8rem;
-}
-.information {
-  padding-left: 1rem;
-}
-.classTitle {
-  font-size: var(--font-size-title);
-  font-weight: var(--text-font-weight);
-}
-.address {
-  font-size: 0.9rem;
-  color: var(--text-color-muted);
-}
-.selectedServices {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.lists {
+.salonsContainer {
   width: 100%;
-  list-style-type: none;
-}
-.serviceList {
-  margin: 0.5rem;
-}
-.priceInfo {
+  min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
-}
-.priceInfo span {
-  font-weight: var(--text-font-paragraph);
-}
-.continueButton {
-  width: 80%;
-  height: 3rem;
-  border-radius: 2rem;
-  background-color: var(--button-color);
-}
-.continueButton a {
-  color: var(--text-color-secondary);
-  text-decoration: none;
-  border: none;
-  font-weight: var(--text-font-weight);
-  font-size: 1rem;
-}
-.articlesContainer {
-  display: flex;
-  flex-direction: row;
-  width: 40vw;
-  background-color: var(--article-background-color);
-  padding: 2rem;
-  border-radius: 1rem;
-}
-.employees {
-  display: flex;
-  flex-direction: row;
-}
-.employeeProfile {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.employeeProfile img {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-}
-.employeeName {
-  font-weight: var(--text-font-weight);
-  text-align: center;
+  gap: 2rem;
 }
 
-/*footer хэсэг */
+.salonsContainer a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+  font-weight: var(--text-font-weight);
+}
+.articleSalon {
+  width: 15rem;
+  height: 40vh;
+  background-color: var(--article-background-color);
+  border-radius: 1rem;
+}
+.salonImage {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.articleDescription {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.salonAddress {
+  color: var(--text-color-muted);
+  font-size: var(--font-size-muted);
+}
+.salonRating {
+  font-size: var(--font-size-muted);
+}
+.salonName {
+  font-size: var(--font-size-title);
+}
+
+article {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+article:hover {
+  transform: scale(1.05);
+}
 
 footer {
   width: 100%;

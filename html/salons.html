@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/salons.css">
+    <title>Салонууд</title>
+    <script src="../js/salons.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Luna</div>
+            <div class="search"> <input type="text" id="nameInput" placeholder="Байгууллагын нэр">
+                <input type="text" id="locationInput" placeholder="байршил">
+                <input type="date" id="dateInput" placeholder="он сар өдөр">
+                <input type="time" id="timeInput" placeholder="цаг">
+                <button class="buttonSearch">Хайх</button>
+            </div>
+            <div class="headerButtonContainer">
+                <div class="dropdownMenu">
+                    <button class="buttonMenu">Цэс</button>
+                    <div class="dropdown-content">
+                        <a href="loginPage.html">Нэвтрэх</a>
+                        <a href="signupPage.html">Бүртгүүлэх</a>
+                        <a href="#">English</a>
+                        <a href="#">Luna for Business</a>
+                    </div>
+                </div>
+                <a href="./booking.html">
+                    <img src="../assets/profile.jpg" alt="profile" class="profileLogo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="salonsListSection" id="salonsListSection">
+            <h2>Үйлчилгээний газрууд</h2>
+            <div class="salonsContainer" id="salonsContainer"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerBody">
+            <div class="logo">Luna</div>
+            <ul>
+                <li><a href="">privacy</a></li>
+                <li><a href="">term of use</a></li>
+                <li><a href="">term of services</a></li>
+            </ul>
+            <ul>
+                <li><a href="">instagram</a></li>
+                <li><a href="">facebook</a></li>
+                <li><a href="">linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

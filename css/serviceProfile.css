@@ -1,6 +1,13 @@
 :root {
-  --background-color: linear-gradient(#f6e9f5, rgb(245, 216, 241));
-  --navbar-color: linear-gradient(#fde5fb, rgb(245, 216, 241));
+  --background-color: linear-gradient(
+    to right,
+    white,
+    #ffe4ea,
+    #ffaebf,
+    #ffc8d4,
+    #ffaebf
+  );
+  --navbar-color: linear-gradient(to right, white, #ffccd5, #ff99ac, #ff6b89);
   --button-color: #81018c;
   --background-secondary-color: #f1aee9;
   --text-color-primary: black;
@@ -17,29 +24,39 @@
 }
 body {
   font-family: "Inria Serif";
-  background-image: var(--background-color);
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
 }
+main {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*header style*/
 
 header {
   height: 5rem;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 nav {
-  width: 80%;
   height: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--white-bg-box-shadow);
   background-image: var(--navbar-color);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 nav button {
   width: 10vw;
@@ -50,20 +67,16 @@ nav button {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: var(--article-background-color);
 }
-h2 {
-  font-family: "lobster";
-}
-.logo {
-  font-family: "Lobster";
-  font-size: 3rem;
-}
 .buttonMenu a,
 .buttonMenu {
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
 }
-
+.logo {
+  font-family: "Lobster";
+  font-size: 3rem;
+}
 .dropdownMenu {
   display: flex;
   align-items: center;
@@ -87,25 +100,28 @@ h2 {
   text-decoration: none;
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
 .dropdownMenu:hover .dropdown-content {
   display: block;
 }
+.profileLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 .headerLogo {
   height: 5rem;
 }
 .headerButtonContainer {
-  height: 100%;
-  width: 40vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
+/* Хайлтын хэсэг */
 .search input {
   width: 10vw;
   height: 2.5rem;
@@ -145,17 +161,13 @@ input {
   color: var(--text-color-secondary);
   font-weight: var(--text-font-weight);
 }
-main {
-  width: 100vw;
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
+/* салоны талаарх мэдээлэл */
 h2 {
   width: 80vw;
 }
 .mainSection {
+  margin-top: 5rem;
   width: 100vw;
   height: 80vh;
   display: flex;
@@ -197,6 +209,8 @@ h2 {
   grid-row-start: 2;
   grid-row-end: 3;
 }
+
+/* салоны үйлчилгээний хэсэг */
 .servicesHeader {
   width: 80vw;
 }
@@ -211,16 +225,35 @@ h2 {
   align-items: center;
   border-radius: 10rem;
 }
+.articlesContainer {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 1rem;
+  gap: 1rem;
+}
 .servicesProfile {
   background-color: var(--article-background-color);
-  width: 15%;
-  height: 40%;
+  width: 15rem;
+  height: 10rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+.servicesProfile a {
+  text-decoration: none;
+}
+.servicesProfile {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.buttonBook:hover {
+  transform: scale(1.05);
 }
 .buttonBook {
   background-color: var(--button-color);
@@ -229,13 +262,12 @@ h2 {
   border: none;
   border-radius: 2rem;
   margin-top: 1rem;
+  color: var(--text-color-secondary);
 }
 .servicesProfile div {
   color: var(--text-color-muted);
 }
-.buttonBook a {
-  color: var(--text-color-secondary);
-}
+
 .employees {
   display: flex;
   flex-direction: row;
@@ -257,37 +289,33 @@ h2 {
 .profession {
   color: var(--text-color-muted);
 }
+
+/*footer хэсэг */
+
 footer {
-  width: 100vw;
-  height: 20vh;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+}
+.footerBody {
+  width: 80%;
+  height: 100%;
   background-image: var(--navbar-color);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 footer a {
   text-decoration: none;
-  color: var(--text-color-muted);
-  font-weight: var(--text-font-paragraph);
-}
-
-a {
-  text-decoration: none;
   color: var(--text-color-primary);
   font-weight: var(--text-font-paragraph);
 }
-.articlesContainer {
-  width: 80vw;
-  height: 60vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  padding: 1rem;
+ul {
+  list-style-type: none;
 }
+
 .teamSection {
   height: 40vh;
 }
@@ -378,4 +406,85 @@ a {
     top: -60%;
     left: 0%;
   }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  /* Header/Navigation */
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav button {
+    width: 80%;
+    margin: 0.5rem;
+  }
+
+  .headerButtonContainer {
+    width: 100%;
+  }
+
+  /* Search section */
+  .search {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .search input {
+    width: 90%;
+    margin: 0.5rem 0;
+  }
+
+  .buttonSearch {
+    width: 90%;
+  }
+
+  /* Main content */
+  main {
+    width: 95%;
+    margin-top: 8rem;
+    grid-template-columns: 1fr;
+  }
+
+  /* Articles containers */
+  .articlesContainer {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .articleSalon {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  /* Service profiles */
+  .servicesProfile {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  /* Aside sections */
+  aside {
+    grid-column: 1;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Tablet styles */
+}
+
+/* Small laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Small laptop styles */
 }

@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     <title>Booking Page</title>
+    <script src="../js/booking.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <nav>
             <div class="logo">Luna</div>
             <div class="navigation">
-                <span>Үйлчилгээ</span>
+                <span class="selectedPage">Үйлчилгээ</span>
                 <img src="../assets/right.svg" alt="right" class="right">
                 <span>Артист</span>
                 <img src="../assets/right.svg" alt="right" class="right">
@@ -25,9 +26,8 @@
                 <span>Үргэлжлүүлэх</span>
             </div>
             <div class="headerButtonContainer">
-                <button class="buttonBusiness"><a href="./booking.html">Business</a></button>
                 <div class="dropdownMenu">
-                    <button class="dropbtn">Menu</button>
+                    <button class="buttonMenu">Цэс</button>
                     <div class="dropdown-content">
                         <a href="loginPage.html">Нэвтрэх</a>
                         <a href="signupPage.html">Бүртгүүлэх</a>
@@ -35,6 +35,9 @@
                         <a href="#">Luna for Business</a>
                     </div>
                 </div>
+                <a href="./booking.html">
+                    <img src="../assets/profile.jpg" alt="profile" class="profileLogo">
+                </a>
             </div>
         </nav>
     </header>
@@ -94,69 +97,30 @@
                 <button class="buttonBook" id="buttonId4">Нэмэх</button>
             </article>
         </section> -->
-        <aside class="aside">
+        <aside class="aside" id="basket">
             <div class="bookingImgContainer">
-                <img src="../assets/salonImage.jpg" alt="">
-                <div class="information">
-                    <div class="classTitle">Barber Shop Mongolia</div>
-                    <div class="address">Хан уул дүүрэг 12-р хороо</div>
-                </div>
             </div>
             <div class="selectedServices">
                 <div class="lists">
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Будалтгүй педикур</span>
-                                <span class="price">40000</span>
-                            </div>
-                            <div class="duration">2цаг 30мин</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Будалтгүй педикур</span>
-                                <span class="price">40000</span>
-                            </div>
-                            <div class="duration">2цаг 30мин</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Будалтгүй педикур</span>
-                                <span class="price">40000</span>
-                            </div>
-                            <div class="duration">2цаг 30мин</div>
-                        </div>
-                    </li>
-                    <hr>
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Нийт</span>
-                                <span class="price">120000</span>
-                            </div>
-                        </div>
-                    </li>
                 </div>
             </div>
             <button class="continueButton"><a href="selectProfessional.html">Үргэлжлүүлэх</a></button>
         </aside>
     </main>
     <footer>
-        <div class="logo">Luna</div>
-        <ul>
-            <li><a href="">privacy</a></li>
-            <li><a href="">term of use</a></li>
-            <li><a href="">term of services</a></li>
-        </ul>
-        <ul>
-            <li><a href="">instagram</a></li>
-            <li><a href="">facebook</a></li>
-            <li><a href="">linkedin</a></li>
-        </ul>
+        <div class="footerBody">
+            <div class="logo">Luna</div>
+            <ul>
+                <li><a href="">privacy</a></li>
+                <li><a href="">term of use</a></li>
+                <li><a href="">term of services</a></li>
+            </ul>
+            <ul>
+                <li><a href="">instagram</a></li>
+                <li><a href="">facebook</a></li>
+                <li><a href="">linkedin</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 

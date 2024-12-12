@@ -1,6 +1,13 @@
 :root {
-  --background-color: linear-gradient(#f6e9f5, rgb(245, 216, 241));
-  --navbar-color: linear-gradient(#fde5fb, rgb(245, 216, 241));
+  --background-color: linear-gradient(
+    to right,
+    white,
+    #ffe4ea,
+    #ffaebf,
+    #ffc8d4,
+    #ffaebf
+  );
+  --navbar-color: linear-gradient(to right, white, #ffccd5, #ff99ac, #ff6b89);
   --button-color: #81018c;
   --background-secondary-color: #f1aee9;
   --navbar-primary-color: #ffd0fb;
@@ -19,33 +26,43 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inria Serif";
+  width: 100vw;
   overflow-x: hidden;
-  background-image: var(--background-color);
+  margin: 0;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 main {
-  width: 80%;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/*header style*/
 
 header {
   height: 5rem;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: var(--navbar-color);
+  display: flex;
+  justify-content: center;
 }
 nav {
   height: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--white-bg-box-shadow);
+  background-image: var(--navbar-color);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 nav button {
   width: 10vw;
@@ -53,7 +70,7 @@ nav button {
   border-radius: 10rem;
   margin: 1rem;
   border: 1px solid white;
-  box-shadow: var(--white-bg-box-shadow);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: var(--article-background-color);
 }
 .navigation {
@@ -61,6 +78,7 @@ nav button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .right {
   width: 1rem;
@@ -105,15 +123,22 @@ nav button {
 .dropdownMenu:hover .dropdown-content {
   display: block;
 }
-
+.profileLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.headerLogo {
+  height: 5rem;
+}
 .headerButtonContainer {
-  height: 100%;
-  width: 40vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
+
+/* хайлтын хэсэг */
 
 .search input {
   width: 10vw;
@@ -157,6 +182,7 @@ input {
 main {
   margin-top: 5rem;
   height: 100vh;
+  width: 80vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -167,7 +193,7 @@ h4 {
   font-size: var(--font-size-title);
   font-weight: var(--text-font-weight);
 }
-.sectionHeader {
+.serviceHeader {
   grid-column-start: 1;
   grid-column-end: 2;
   width: 80%;
@@ -280,9 +306,17 @@ aside {
   font-weight: var(--text-font-weight);
   font-size: 1rem;
 }
+/*footer хэсэг */
+
 footer {
-  width: 100vw;
+  width: 100%;
   height: 25vh;
+  display: flex;
+  justify-content: center;
+}
+.footerBody {
+  width: 80%;
+  height: 100%;
   background-image: var(--navbar-color);
   display: flex;
   flex-direction: row;
@@ -302,4 +336,7 @@ article {
 }
 article:hover {
   transform: scale(1.05);
+}
+.selectedPage {
+  font-weight: bold;
 }

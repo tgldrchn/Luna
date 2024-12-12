@@ -1,0 +1,44 @@
+{
+    "comments": [
+        {
+            "id": 1,
+            "user": "Emma Wilson",
+            "profileImage": "/assets/images/profiles/emma-wilson.jpg",
+            "timestamp": "2024-01-25T09:15:00Z",
+            "content": "This website design is fantastic! The color scheme really pops.",
+            "likes": 12
+        },
+        {
+            "id": 2,
+            "user": "James Chen",
+            "profileImage": "/assets/images/profiles/james-chen.jpg",
+            "timestamp": "2024-01-25T10:30:00Z",
+            "content": "The navigation is so intuitive. Great user experience!",
+            "likes": 8
+        },
+        {
+            "id": 3,
+            "user": "Sofia Rodriguez",
+            "profileImage": "/assets/images/profiles/sofia-rodriguez.jpg",
+            "timestamp": "2024-01-25T11:45:00Z",
+            "content": "Love how responsive the site is on mobile devices.",
+            "likes": 15
+        },
+        {
+            "id": 4,
+            "user": "Alex Thompson",
+            "profileImage": "/assets/images/profiles/alex-thompson.jpg",
+            "timestamp": "2024-01-25T13:20:00Z",
+            "content": "The content layout is perfect. Easy to read and scan through.",
+            "likes": 6
+        },
+        {
+            "id": 5,
+            "user": "Maya Patel",
+            "profileImage": "/assets/images/profiles/maya-patel.jpg",
+            "timestamp": "2024-01-25T14:45:00Z",
+            "content": "Amazing work on the interactive elements! Very engaging.",
+            "likes": 10
+        }
+    ]
+}
