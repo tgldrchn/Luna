@@ -1,100 +1,180 @@
-fetch("https://dummyjson.com/c/f92e-cea1-45fa-9fb4")
-  .then((response) => {
-    if (!response.ok) {
-      console.log(`status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    getDataById(data.salons);
-  })
-  .catch((error) => {
-    console.error("There was an error:", error);
-  });
+import Salon from "./salon.js";
+import Data from "./data.js";
 
-const getDataById = (data) => {
-  const queryString = window.location.search;
-  const params = new URLSearchParams(queryString);
-  const id = params.get("id");
-  const serviceId = params.get("serviceId");
-  const salon = data.filter((salon) => salon.id == id);
-  addService(salon[0], serviceId);
-  displayServices(salon[0].services);
-};
+class Booking extends HTMLElement {
+  constructor(salon, services) {
+    // super();
+    // this.salon = salon;
+    // this.innerHTML = ` <aside class="aside" id="basket">
+    //         <div class="bookingImgContainer" id="bookingImgContainer">
+    //         <img src="" alt="">
+    //             <div class="information">
+    //                 <div class="classTitle">${this.salon.name}</div>
+    //                 <div class="address">${this.salon.address}</div>
+    //             </div>
+    //         </>
+    //         </div>
+    //         <div class="selectedServices">
+    //             <div class="lists" id="lists">
+    //             </div>
+    //         </div>
+    //         <button class="continueButton" id="continueButton">Үргэлжлүүлэх</button>
+    //     </aside>`;
 
-const displayServices = (services) => {
-  const serviceContainer = document.getElementById("articlesContainer");
-  selectedServices.forEach((service) => {
-    const articleHTML = `
-              <div class="servicesProfile" id="servicesProfile">
-                  <h3>${service.name}</h3>
-                  <div class="serviceDuration">${service.duration} Mинут</div>
-                  <div class="servicesPrice">${service.price} MNT</div>
-                  <button class="buttonBook" id=${service.id}>Захиалах</button>
-              </div>`;
-    serviceContainer.innerHTML += articleHTML;
-  });
-  const bookButtons = document.querySelectorAll(".buttonBook");
-  bookButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const serviceId = event.target.id;
-      const queryString = window.location.search;
-      const queryParams = new URLSearchParams(queryString);
-      queryParams.append("serviceId", serviceId);
-      window.location.href = `booking.html?${queryParams.toString()}`;
-    });
-  });
-};
+    super();
+    this.attachShadow({ mode: "open" });
+    this.services = services;
+    this.salon = salon;
+  }
 
-const addService = (salon, serviceId) => {
-  const basket = document.getElementById("basket");
-  const salonContainer = basket.querySelector(".bookingImgContainer");
-  const serviceContainer = basket.querySelector(".selectedServices");
-  const lists = serviceContainer.querySelector(".lists");
-  console.log(salon);
+  connectedCallback() {
+    this.render();
+    this.setupEventListeners();
+  }
 
-  const salonHTML = `  <img src="../assets/${salon.images[0]}" alt="">
-                <div class="information">
-                    <div class="classTitle">${salon.name}</div>
-                    <div class="address">${salon.address}</div>
-                </div>
-    `;
-  salonContainer.innerHTML = salonHTML;
+  set salonData(data) {
+    this._salonData = data;
+    this.render();
+  }
 
-  var selectedServices = salon.services.filter(
-    (service) => service.id == serviceId
-  );
-
-  selectedServices.forEach((service) => {
-    const serviceHTML = `  <li>
-    <div class="serviceList">
-        <div class="priceInfo">
-            <span class="serviveType">${service.name}</span>
-            <span class="price">${service.price}</span>
+  render() {
+    this.shadowRoot.innerHTML = `
+     <aside class="aside" id="basket">
+        <div class="bookingImgContainer">
+            <div class="information">
+              <div class="classTitle">${this._salonData.name}</div>
+              <div class="address">${this._salonData.address}</div>
+            </div>
+        <div class="selectedServices">
+          <div class="lists" id="lists">
+            ${this.renderSelectedServices()}
+            ${this.renderTotalPrice()}
+          </div>
         </div>
-        <div class="duration">${service.duration}</div>
-    </div>
-</li>`;
+        
+        <button class="continueButton" id="continueButton">Үргэлжлүүлэх</button>
+      </aside>
+    `;
+  }
 
-    lists.innerHTML += serviceHTML;
-  });
+  addService(service) {
+    this.services.push(service);
+    this.render();
+  }
 
-  const totalPrice = selectedServices.reduce(
-    (total, service) => total + service.price,
-    0
-  );
+  setupEventListeners() {
+    this.shadowRoot
+      .querySelector("#continueButton")
+      .addEventListener("click", () => {
+        const bookingData = {
+          salon: this._salonData,
+          services: this.services,
+        };
+        localStorage.setItem("booking", JSON.stringify(bookingData));
+        window.location.href = `./selectProfessional.html?salon=${this._salonData.id}`;
+      });
+  }
 
-  const totalPriceHTML = ` 
-  <hr><li>
+  renderSelectedServices() {
+    let listsHTML = "";
+    this.services.forEach((service) => {
+      const listHTML = `<li>
+      <div class="serviceList">
+          <div class="priceInfo">
+              <span class="serviveType">${service.name}</span>
+              <span class="price">${service.price}</span>
+          </div>
+          <div class="duration">${service.duration}</div>
+      </div>
+  </li>`;
+      listsHTML += listHTML;
+    });
+    return listsHTML;
+  }
+  renderTotalPrice() {
+    let totalPrice = 0;
+    this.services.forEach((service) => {
+      totalPrice += service.price;
+    });
+    return `
+    <hr>
+    <li>
     <div class="serviceList">
         <div class="priceInfo">
             <span class="serviveType">Нийт</span>
             <span class="price">${totalPrice}</span>
         </div>
-        <div class="duration"></div>
     </div>
 </li>`;
+  }
 
-  lists.innerHTML += totalPriceHTML;
+  addService(service) {
+    this.services.push(service);
+  }
+}
+
+window.customElements.define("booking-component", Booking);
+
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const salonId = params.get("salon");
+const serviceId = params.get("serviceId");
+
+const data = new Data("https://dummyjson.com/c/e293-1cc5-45e3-bf61");
+await data.refreshData();
+const salonData = data.getSalonDataById(salonId);
+
+const salon = new Salon(salonData);
+const services = salon.getServices();
+
+let selectedServices = services.filter((service) => service.id == serviceId);
+let remainedServices = services.filter((service) => service.id != serviceId);
+
+const booking = new Booking(salon, selectedServices);
+const bookingImgContainer = document.getElementById("bookingImgContainer");
+bookingImgContainer.innerHTML = booking.renderSalon();
+
+const lists = document.getElementById("lists");
+lists.innerHTML = booking.renderSelectedServices();
+const totalPrice = booking.renderTotalPrice();
+lists.insertAdjacentHTML("beforeend", totalPrice);
+
+const renderRemainedServices = (services) => {
+  const servicesContainer = document.getElementById("articlesContainer");
+  let servicesHTML = "";
+  services.forEach((service) => {
+    const serviceHTML = ` <div class="servicesProfile" id="servicesProfile">
+                  <h3>${service.name}</h3>
+                  <div class="serviceDuration">${service.duration} Mинут</div>
+                  <div class="servicesPrice">${service.price} MNT</div>
+                  <button class="buttonAdd" id=${service.id}>Нэмэх</button>
+              </div>`;
+    servicesHTML += serviceHTML;
+  });
+  servicesContainer.innerHTML = servicesHTML;
 };
+
+renderRemainedServices(remainedServices);
+
+const buttons = document.querySelectorAll(".buttonAdd");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const serviceId = button.id;
+    const selectedService = services.find((service) => service.id == serviceId);
+    remainedServices = remainedServices.filter(
+      (service) => service.id != serviceId
+    );
+    booking.addService(selectedService);
+
+    renderRemainedServices(remainedServices);
+    lists.innerHTML = booking.renderSelectedServices();
+    const totalPrice = booking.renderTotalPrice();
+    lists.insertAdjacentHTML("beforeend", totalPrice);
+  });
+});
+
+const continueButton = document.getElementById("continueButton");
+continueButton.addEventListener("click", () => {
+  localStorage.setItem("booking", JSON.stringify(booking));
+  window.location.href = `./selectProfessional.html?salon=${salonId}`;
+});

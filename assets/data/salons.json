@@ -1,0 +1,162 @@
+{
+    "salons": [
+        {
+            "id": 1,
+            "name": "Luna Beauty Salon",
+            "about": "Luna Beauty Salon is a premium beauty destination offering a wide range of professional services in a luxurious and relaxing environment.",
+            "openingHours": {
+                "weekdays": "09:00 - 20:00",
+                "weekends": "10:00 - 18:00",
+                "holidays": "Closed"
+            },
+            "address": "Peace Avenue 54, UB City",
+            "contact": {
+                "phone": "+976 9911-2233",
+                "email": "luna.beauty@salon.com"
+            },
+            "employees": [
+                {
+                    "id": 1,
+                    "name": "Tuguldur",
+                    "position": "Make up Artist",
+                    "experience": "5 years",
+                    "image": "../assets/profile.jpg"
+                },
+                {
+                    "id": 2,
+                    "name": "Saraa",
+                    "position": "Hair Stylist",
+                    "experience": "7 years",
+                    "image": "../assets/profile.jpg"
+                }
+            ],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Haircut",
+                    "price": 35000,
+                    "duration": "45 min",
+                    "description": "Professional haircut and styling"
+                },
+                {
+                    "id": 2,
+                    "name": "Massage",
+                    "price": 65000,
+                    "duration": "60 min",
+                    "description": "Full body relaxation massage"
+                },
+                {
+                    "id": 3,
+                    "name": "Nail Care",
+                    "price": 45000,
+                    "duration": "40 min",
+                    "description": "Manicure and nail art"
+                }
+            ],
+            "rating": 4.5
+        },
+        {
+            "id": 2,
+            "name": "Glamour Studio",
+            "about": "Glamour Studio specializes in modern hair styling and innovative beauty treatments with a team of certified professionals.",
+            "openingHours": {
+                "weekdays": "10:00 - 21:00",
+                "weekends": "11:00 - 19:00",
+                "holidays": "11:00 - 17:00"
+            },
+            "address": "Central Tower, 3rd Floor, Sukhbaatar District",
+            "contact": {
+                "phone": "+976 9922-3344",
+                "email": "glamour@studio.com"
+            },
+            "employees": [
+                {
+                    "id": 1,
+                    "name": "Bataa",
+                    "position": "Senior Hair Stylist",
+                    "experience": "10 years",
+                    "image": "../assets/profile.jpg"
+                },
+                {
+                    "id": 2,
+                    "name": "Zaya",
+                    "position": "Nail Artist",
+                    "experience": "4 years",
+                    "image": "../assets/profile.jpg"
+                }
+            ],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Hair Coloring",
+                    "price": 85000,
+                    "duration": "120 min",
+                    "description": "Professional hair coloring and treatment"
+                },
+                {
+                    "id": 2,
+                    "name": "Facial Treatment",
+                    "price": 75000,
+                    "duration": "90 min",
+                    "description": "Deep cleansing facial with premium products"
+                }
+            ],
+            "rating": 4.2
+        },
+        {
+            "id": 3,
+            "name": "Royal Spa & Beauty",
+            "about": "Royal Spa & Beauty offers premium spa treatments and beauty services in a tranquil environment.",
+            "openingHours": {
+                "weekdays": "08:00 - 22:00",
+                "weekends": "09:00 - 20:00",
+                "holidays": "10:00 - 18:00"
+            },
+            "address": "Shangri-La Mall, 5th Floor, Khan-Uul District",
+            "contact": {
+                "phone": "+976 9933-4455",
+                "email": "royal@spabeauty.com"
+            },
+            "employees": [
+                {
+                    "id": 1,
+                    "name": "Oyunaa",
+                    "position": "Spa Therapist",
+                    "experience": "8 years",
+                    "image": "../assets/profile.jpg"
+                },
+                {
+                    "id": 2,
+                    "name": "Bold",
+                    "position": "Massage Therapist",
+                    "experience": "6 years",
+                    "image": "../assets/profile.jpg"
+                }
+            ],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Hot Stone Massage",
+                    "price": 120000,
+                    "duration": "90 min",
+                    "description": "Relaxing hot stone therapy massage"
+                },
+                {
+                    "id": 2,
+                    "name": "Premium Facial",
+                    "price": 95000,
+                    "duration": "75 min",
+                    "description": "Luxury facial treatment with organic products"
+                },
+                {
+                    "id": 3,
+                    "name": "Body Scrub",
+                    "price": 80000,
+                    "duration": "60 min",
+                    "description": "Full body exfoliation and moisturizing"
+                }
+            ],
+            "rating": 4.9
+        }
+    ]
+}

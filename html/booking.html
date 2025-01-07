@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     <title>Booking Page</title>
-    <script src="../js/booking.js" defer></script>
+    <script src="../js/booking.js" defer type="module"></script>
 </head>
 
 <body>
@@ -42,70 +42,14 @@
         </nav>
     </header>
     <main>
-        <section class="servicesHeader" id="servicesHeader">
-            <h4>Сонгосон үйлчилгээ</h4>
-            <div class="articlesContainer">
-                <article class="servicesProfile">
-                    <h3>Үс засалт</h3>
-                    <div class="serviceDuration">2h 50min</div>
-                    <div class="servicesPrice">70000MNT</div>
-                    <button class="buttonRemove" id="buttonId1">Хасах</button>
-                </article>
-                <article class="servicesProfile">
-                    <h3>Үс засалт</h3>
-                    <div class="serviceDuration">2h 50min</div>
-                    <div class="servicesPrice">70000MNT</div>
-                    <button class="buttonRemove" id="buttonId1">Хасах</button>
-                </article>
-                <article class="servicesProfile">
-                    <h3>Үс засалт</h3>
-                    <div class="serviceDuration">2h 50min</div>
-                    <div class="servicesPrice">70000MNT</div>
-                    <button class="buttonRemove" id="buttonId1">Хасах</button>
-                </article>
-            </div>
-        </section>
         <section class="addService">
             <h4>Үйлчилгээ нэмэх</h4>
-            <article class="servicesProfile">
-                <button class="buttonAdd">Нэмэх</button>
-            </article>
+            <div class="articlesContainer" id="articlesContainer">
+            </div>
         </section>
-        <!-- <section class="services" id="content">
-            <article class="servicesProfile">
-                <h3>Үс засалт</h3>
-                <div class="serviceDuration">2h 50min</div>
-                <div class="servicesPrice">70000MNT</div>
-                <button class="buttonBook" id="buttonId1">Нэмэх</button>
-            </article>
-            <article class="servicesProfile">
-                <h3>Үс засалт</h3>
-                <div class="serviceDuration">2h 50min</div>
-                <div class="servicesPrice">70000MNT</div>
-                <button class="buttonBook" id="buttonId2">Нэмэх</button>
-            </article>
-            <article class="servicesProfile">
-                <h3>Үс засалт</h3>
-                <div class="serviceDuration">2h 50min</div>
-                <div class="servicesPrice">70000MNT</div>
-                <button class="buttonBook" id="buttonId3">Нэмэх</button>
-            </article>
-            <article class="servicesProfile">
-                <h3>Үс засалт</h3>
-                <div class="serviceDuration">2h 50min</div>
-                <div class="servicesPrice">70000MNT</div>
-                <button class="buttonBook" id="buttonId4">Нэмэх</button>
-            </article>
-        </section> -->
-        <aside class="aside" id="basket">
-            <div class="bookingImgContainer">
-            </div>
-            <div class="selectedServices">
-                <div class="lists">
-                </div>
-            </div>
-            <button class="continueButton"><a href="selectProfessional.html">Үргэлжлүүлэх</a></button>
-        </aside>
+
+        <booking-component></booking-component>
+
     </main>
     <footer>
         <div class="footerBody">

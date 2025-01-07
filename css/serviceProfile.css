@@ -9,7 +9,7 @@
   );
   --navbar-color: linear-gradient(to right, white, #ffccd5, #ff99ac, #ff6b89);
   --button-color: #81018c;
-  --background-secondary-color: #f1aee9;
+  --background-secondary-color: #ffaebf;
   --text-color-primary: black;
   --text-color-secondary: white;
   --text-color-muted: gray;
@@ -225,6 +225,10 @@ h2 {
   align-items: center;
   border-radius: 10rem;
 }
+ul a {
+  text-decoration: none;
+  font-weight: var(--text-font-weight);
+}
 .articlesContainer {
   width: 80vw;
   height: 50vh;
@@ -252,10 +256,10 @@ h2 {
 .servicesProfile {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.buttonBook:hover {
+.bookingButton:hover {
   transform: scale(1.05);
 }
-.buttonBook {
+.bookingButton {
   background-color: var(--button-color);
   width: 80%;
   height: 2rem;
