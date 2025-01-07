@@ -1,96 +1,60 @@
-fetch("https://dummyjson.com/c/f92e-cea1-45fa-9fb4")
-  .then((response) => {
-    if (!response.ok) {
-      console.log(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    displaySalons(data.salons);
-  })
-  .catch((error) => {
-    console.error("There was an error:", error);
-  });
+import Data from "./data.js";
+import Comment from "./comments.js";
+import Salon from "./salon.js";
+import "./salonList.js";
 
-const displaySalons = (data) => {
-  const containerSuggested = document.getElementById("suggestedSection");
-  const containerSuggestedArticle =
-    containerSuggested.querySelector(".articlesContainer");
-  const containerTopRated = document.getElementById("topRatedSection");
-  const containerTopRatedArticle =
-    containerTopRated.querySelector(".articlesContainer");
+const salonsData = new Data("https://dummyjson.com/c/e293-1cc5-45e3-bf61");
+const commentsData = new Data("https://dummyjson.com/c/4673-bbad-482c-90fd");
 
-  containerSuggestedArticle.innerHTML = "";
+const salons = await salonsData.refreshData();
+const comments = await commentsData.refreshData();
 
-  data.forEach((salon) => {
-    const articleHTML = `
-    <a href="serviceProfile.html?id=${salon.id}">
-        <article class="articleSalon">
-            <img src="../assets/${salon.images[0]}" alt="img" class="salonImage">
-            <div class="articleDescription">
-                <div class="salonName">${salon.name}</div>
-                <div class="salonRating">${salon.rating}</div>
-                <div class="salonAddress">${salon.address}</div>
-            </div>
-        </article>
-    </a>`;
+console.log(salons.salons);
 
-    containerSuggestedArticle.innerHTML += articleHTML;
-    containerTopRatedArticle.innerHTML += articleHTML;
-  });
-};
+// const suggestedSection = document.getElementById("suggestedSection");
+// const articlesContainer = suggestedSection.querySelector("#articlesContainer");
+// let salonsHTML = "";
+// salons.salons.forEach((salon) => {
+//   const salonHTML = new Salon(salon).render();
+//   salonsHTML += salonHTML;
+// });
+// articlesContainer.innerHTML = salonsHTML;
 
-fetch("https://dummyjson.com/c/4673-bbad-482c-90fd")
-  .then((response) => {
-    if (!response.ok) {
-      console.log(`HTTP error! status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    displayComments(data.comments);
-  })
-  .catch((error) => {
-    console.error("There was an error:", error);
-  });
+const salonList = document.querySelector("salon-list");
+salonList.data = salons.salons;
 
-const displayComments = (data) => {
-  const commentContainer = document.getElementById("commentsSection");
-  const commentContainerArticle =
-    commentContainer.querySelector(".articlesContainer");
+// const topRatedSection = document.getElementById("topRatedSection");
+// const topRatedContainer = topRatedSection.querySelector("#articlesContainer");
+// let topRatedHTML = "";
+// const ratedSalons = salons.salons.sort((a, b) => b.rating - a.rating);
+// console.log(ratedSalons);
+// ratedSalons.forEach((salon) => {
+//   const salonHTML = new Salon(salon).render();
+//   topRatedHTML += salonHTML;
+// });
+// topRatedContainer.innerHTML = topRatedHTML;
 
-  commentContainerArticle.innerHTML = "";
-
-  data.forEach((comment) => {
-    const articleHTML = `
-         <div>
-            <article class="commentArticle">
-                <div class="topSection"> 
-                    <img src="..${comment.profileImage}" alt="salon" class="profileImage">
-                    <div class="profileName">${comment.user}</div>
-                </div>
-                <div class="comments">${comment.content}</div>
-               
-            </article>
-        </div>`;
-    commentContainerArticle.innerHTML += articleHTML;
-  });
-};
+const commentsSection = document.getElementById("commentsSection");
+const commentsContainer = commentsSection.querySelector("#articlesContainer");
+let commentsHTML = "";
+comments.comments.forEach((comment) => {
+  const commentHTML = new Comment(comment).render();
+  commentsHTML += commentHTML;
+});
+commentsContainer.innerHTML = commentsHTML;
 
 const searchButton = document.getElementById("searchButton");
-searchButton.addEventListener("click", () => {
+searchButton.addEventListener(
+  "click",
+  () => {
     const name = document.getElementById("nameInput").value;
     const address = document.getElementById("locationInput").value;
-    const date = document.getElementById("dateInput").value;
-    const time = document.getElementById("timeInput").value;
 
     const queryParams = new URLSearchParams({
-        name: name,
-        address: address,
-        date: date,
-        time: time
+      name: name,
+      address: address,
     });
     window.location.href = `salons.html?${queryParams.toString()}`;
-}, true);
+  },
+  true
+);

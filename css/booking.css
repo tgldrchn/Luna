@@ -252,6 +252,9 @@ aside {
   border-radius: 2rem;
   margin-top: 1rem;
 }
+.buttonAdd:hover {
+  transform: scale(1.05);
+}
 .articlesContainer {
   display: flex;
   flex-direction: row;

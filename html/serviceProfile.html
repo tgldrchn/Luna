@@ -9,7 +9,8 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     <title>Service</title>
-    <script src="../js/serviceProfile.js" defer></script>
+    <script type="module" src="../js/serviceProfile.js">
+    </script>
 
 </head>
 
@@ -41,34 +42,23 @@
     </header>
     <main>
         <section class="mainSection" id="mainSection">
-            <!-- <h2>Barber Shop</h2>
-            <div class="salonAddress">Драмын театрын урд Элит хотхон Номын сангийн KFC-ийн ард</div>
-            <div class="mainImageContainer">
-                <video controls width="800" class="salonVideo">
-                    <source src="video.mp4" type="video/mp4">
-                </video>
-                <img src="../assets/salonImage.jpg" alt="salonImageTop" class="salonImageTop">
-                <img src="../assets/salonImage.jpg" alt="salonImageBottom" class="salonImageBottom">
-            </div> -->
         </section>
         <section class="servicesHeader" id="content">
             <h2>Үйлчилгээ</h2>
             <ul>
-                <li><a href="">Haircut</a></li>
-                <li><a href="">Massage</a></li>
-                <li><a href="">Beard</a></li>
-                <li><a href="">Nail</a></li>
+                <li class="serviceButton">Haircut</li>
+                <li class="serviceButton">Massage</li>
+                <li class="serviceButton">Beard</li>
+                <li class="serviceButton">Nail</li>
+                <li class="showAllButton">Show all</li>
             </ul>
 
         </section>
-        <div class="articlesContainer" id="articlesContainer">
+        <div class="articlesContainer" id="servicesContainer">
         </div>
         <section class="aboutUsSection" id="content">
             <div class="aboutUsBody">
-                <div class="aboutUsParagraph">
-                    <h2>Бидний тухай</h2>
-                    Бид таны цагийг хэмнэж та хүссэн үйлчилгээгээ хаанаас ч захиалан цаг авч
-                    үйлчлүүлэх боломжийг олгох болно.
+                <div class="aboutUsParagraph" id="aboutUsParagraph">
                 </div>
                 <div class="aboutUsImgContainer">
                     <img src="../assets/image2.jpg" alt="aboutUsImage" class="aboutUsImageFront" />
@@ -78,12 +68,7 @@
         </section>
         <section class="teamSection">
             <h2>Teams</h2>
-            <div class="employees">
-                <article class="employeeProfile">
-                    <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
-                    <div class="employeeName">Tuguldur</div>
-                    <div class="profession">make up artist</div>
-                </article>
+            <div class="employees" id="employees">
                 <article class="employeeProfile">
                     <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
                     <div class="employeeName">Tuguldur</div>

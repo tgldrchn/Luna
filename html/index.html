@@ -10,9 +10,24 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     </link>
-    <script src="../js/index.js" defer>
+    <script src="../js/index.js" defer type="module">
+        const toggleSwitch = document.getElementById('darkModeToggle');
+        const body = document.body;
 
+
+        // Add event listener to the switch
+        toggleSwitch.addEventListener('change', () => {
+            console.log("kk")
+            if (toggleSwitch.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
     </script>
+    <script type="module" src="../js/salonList.js"></script>
 </head>
 
 <body>
@@ -29,39 +44,47 @@
                         <a href="#">Luna for Business</a>
                     </div>
                 </div>
-                <a href="./booking.html">
+                <div class="buttonProfile">
                     <img src="../assets/profile.jpg" alt="profile" class="profileLogo">
-                </a>
+                    <div class="dropdownMenuProfile">
+                        <img src="../assets/arrow-down.png" alt="arrow" class="arrowLogo">
+                        <div class="dropdown-content">
+                            <a href=""> <label class="switch">
+                                    <input type="checkbox" id="darkModeToggle">
+                                    <span class="slider round"></span>
+                                </label></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <section class="searchSection" id="searchSection">
+            <!-- <img class="circle" src="../assets/haircut.jpg"></img>
+            <img class="circle1" src="../assets/manicure.jpg"></img>
+            <img class="circle2" src="../assets/male-haircut.jpg"></img>
+            <img class="circle3" src="../assets/spa.jpg"></img> -->
             <div class="titleContainer">
                 <h1>Хүссэн үйлчилгээгээ хүссэн газраасаа захиалаарай</h1>
-                <audio controls>
-                    <source src="audiofile.mp3" type="audio/mpeg">
-                </audio>
             </div>
             <div class="search">
                 <input type="text" id="nameInput" placeholder="Үйлчилгээ">
                 <input type="text" id="locationInput" placeholder="Байршил">
-                <input type="date" id="dateInput" placeholder="Өдөр">
-                <input type="time" id="timeInput" placeholder="Цаг">
                 <button class="buttonSearch" id="searchButton">Хайх</button>
             </div>
         </section>
         <section class="suggestedSection" id="suggestedSection">
             <h2>Санал болгох</h2>
-            <div class="articlesContainer" id="articlesContainer">
-            </div>
+            <salon-list></salon-list>
         </section>
         <section class="topRatedSection" id="topRatedSection">
             <h2>Өндөр үнэлгээтэй</h2>
-            <div class="articlesContainer">
+            <div class="articlesContainer" id="articlesContainer">
             </div>
         </section>
         <section class=" aboutUsSection" id="content">
+
             <div class="aboutUsBody">
                 <div class="aboutUsParagraph">
                     <h2>Бидний тухай</h2>
@@ -76,7 +99,7 @@
         </section>
         <section class="commentsSection" id="commentsSection">
             <h2>Comments</h2>
-            <div class="articlesContainer">
+            <div class="articlesContainer" id="articlesContainer">
             </div>
         </section>
     </main>

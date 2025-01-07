@@ -7,6 +7,7 @@
     <meta name="description" content="Үйлчлүүлэх ажилтнаа сонгох хэсэг">
     <link rel="stylesheet" href="../css/selectProfessional.css">
     <title>Select Professional</title>
+    <script src="../js/booking.js" type="module"></script>
 </head>
 
 <body>
@@ -43,78 +44,25 @@
             <h4>Үйлчлүүлэх ажилтнаа сонгоно уу</h4>
             <section class="servicesHeader" id="servicesHeader">
                 <h4>Сонгосон үйлчилгээ</h4>
-                <article class="servicesProfile">
-                    <h3>Үс засалт</h3>
-                    <div class="serviceDuration">2h 50min</div>
-                    <div class="servicesPrice">70000MNT</div>
-                    <button class="buttonRemove" id="buttonId1">Cонгох</button>
-                </article>
+                <div class="selectedServices" id="selectedServices"></div>
             </section>
             <section class="teamSection">
                 <h2>Ажилтнууд</h2>
                 <div class="articlesContainer">
-                    <article class="employeeProfile">
-                        <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
-                        <div class="employeeName">Any Professional</div>
-                    </article>
-                    <article class="employeeProfile">
-                        <img src="../assets/profile.jpg" alt="employee" class="employeeImage">
-                        <div class="employeeName">Tuguldur</div>
-                    </article>
+
                 </div>
             </section>
         </div>
-
-        <aside class="aside">
-            <div class="bookingImgContainer">
-                <img src="../assets/salonImage.jpg" alt="">
-                <div class="information">
-                    <div class="classTitle">Barber Shop Mongolia</div>
-                    <div class="address">Хан уул дүүрэг 12-р хороо</div>
-                </div>
+        <aside class="aside" id="basket">
+            <div class="bookingImgContainer" id="bookingImgContainer">
             </div>
             <div class="selectedServices">
-                <div class="lists">
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Будалтгүй педикур</span>
-                                <span class="price">40000</span>
-                            </div>
-                            <div class="duration">2цаг 30мин</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Будалтгүй педикур</span>
-                                <span class="price">40000</span>
-                            </div>
-                            <div class="duration">2цаг 30мин</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Будалтгүй педикур</span>
-                                <span class="price">40000</span>
-                            </div>
-                            <div class="duration">2цаг 30мин</div>
-                        </div>
-                    </li>
-                    <hr>
-                    <li>
-                        <div class="serviceList">
-                            <div class="priceInfo">
-                                <span class="serviveType">Нийт</span>
-                                <span class="price">120000</span>
-                            </div>
-                        </div>
-                    </li>
+                <div class="lists" id="lists">
                 </div>
             </div>
             <button class="continueButton"><a href="selectProfessional.html">Үргэлжлүүлэх</a></button>
         </aside>
+
     </main>
     <footer>
         <div class="footerBody">
