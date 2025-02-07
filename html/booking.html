@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Авахыг хүсч буй үйлчилгээгээ сонгох хэсэг">
+    <link rel="stylesheet" href="../css/property.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/booking.css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     <title>Booking Page</title>
-    <script src="../js/booking.js" defer type="module"></script>
+    <script src="../js/booking.js" defer type="module">
+    </script>
+    <script src="../js/serviceList.js" defer type="module"></script>
+
+
 </head>
 
 <body>
@@ -44,28 +51,12 @@
     <main>
         <section class="addService">
             <h4>Үйлчилгээ нэмэх</h4>
-            <div class="articlesContainer" id="articlesContainer">
-            </div>
+            <service-list></service-list>
         </section>
 
         <booking-component></booking-component>
-
     </main>
-    <footer>
-        <div class="footerBody">
-            <div class="logo">Luna</div>
-            <ul>
-                <li><a href="">privacy</a></li>
-                <li><a href="">term of use</a></li>
-                <li><a href="">term of services</a></li>
-            </ul>
-            <ul>
-                <li><a href="">instagram</a></li>
-                <li><a href="">facebook</a></li>
-                <li><a href="">linkedin</a></li>
-            </ul>
-        </div>
-    </footer>
+
 </body>
 
 </html>

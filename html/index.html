@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Веб сайтын нүүр хуудас">
     <title>Home page</title>
+    <link rel="stylesheet" href="../css/property.css">
+    <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
     </link>
@@ -36,7 +40,8 @@
             <div class="logo">Luna</div>
             <div class="headerButtonContainer">
                 <div class="dropdownMenu">
-                    <button class="buttonMenu">Цэс</button>
+                    <button class="buttonMenu">Цэс
+                    </button>
                     <div class="dropdown-content">
                         <a href="loginPage.html">Нэвтрэх</a>
                         <a href="signupPage.html">Бүртгүүлэх</a>
@@ -61,10 +66,10 @@
     </header>
     <main>
         <section class="searchSection" id="searchSection">
-            <!-- <img class="circle" src="../assets/haircut.jpg"></img>
+            <img class="circle" src="../assets/haircut.jpg"></img>
             <img class="circle1" src="../assets/manicure.jpg"></img>
             <img class="circle2" src="../assets/male-haircut.jpg"></img>
-            <img class="circle3" src="../assets/spa.jpg"></img> -->
+            <img class="circle3" src="../assets/spa.jpg"></img>
             <div class="titleContainer">
                 <h1>Хүссэн үйлчилгээгээ хүссэн газраасаа захиалаарай</h1>
             </div>
@@ -76,12 +81,11 @@
         </section>
         <section class="suggestedSection" id="suggestedSection">
             <h2>Санал болгох</h2>
-            <salon-list></salon-list>
+            <salon-list type="suggested"></salon-list>
         </section>
         <section class="topRatedSection" id="topRatedSection">
             <h2>Өндөр үнэлгээтэй</h2>
-            <div class="articlesContainer" id="articlesContainer">
-            </div>
+            <salon-list type="topRated"></salon-list>
         </section>
         <section class=" aboutUsSection" id="content">
 

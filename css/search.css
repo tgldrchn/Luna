@@ -1,0 +1,92 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 60%;
+  z-index: 1;
+}
+.search input {
+  width: 32%;
+  height: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  outline: none;
+  border: 0.1rem solid var(--button-color);
+}
+
+.search input::placeholder {
+  font-size: 1.5rem;
+  color: var(--text-color-muted);
+}
+.search input:focus {
+  outline: none;
+}
+
+#nameInput {
+  border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+}
+
+/* #timeInput {
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  padding: 1px;
+}
+#timeInput::placeholder {
+  color: var(--text-color-muted);
+  padding: 1px;
+}
+#dateInput {
+  color: var(--text-color-primary);
+  padding: 1px;
+}
+
+#dateInput::-webkit-datetime-edit-text,
+#dateInput::-webkit-datetime-edit-month-field,
+#dateInput::-webkit-datetime-edit-day-field,
+#dateInput::-webkit-datetime-edit-year-field,
+#timeInput::-webkit-datetime-edit-text,
+#timeInput::-webkit-datetime-edit-month-field,
+#timeInput::-webkit-datetime-edit-day-field,
+#timeInput::-webkit-datetime-edit-year-field {
+  color: var(--text-color-muted);
+}
+
+#dateInput.date-input--has-value::-webkit-datetime-edit-text,
+#dateInput.date-input--has-value::-webkit-datetime-edit-month-field,
+#dateInput.date-input--has-value::-webkit-datetime-edit-day-field,
+#dateInput.date-input--has-value::-webkit-datetime-edit-year-field {
+  color: var(--text-color-primary);
+} */
+
+.buttonSearch {
+  height: 3.5rem;
+  width: 20%;
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  background: var(--button-color-gradient);
+  background-size: 100% 400%;
+  font-size: var(--button-font-size);
+  color: var(--text-color-secondary);
+  font-weight: var(--text-font-weight);
+  border: 0.15rem solid var(--text-color-secondary);
+  animation: gradient 10s ease infinite;
+}
+.buttonSearch:hover {
+  background: var(--button-color); /* Hover effect with solid color */
+  filter: brightness(1.2);
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
