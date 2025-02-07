@@ -1,0 +1,40 @@
+:root {
+  --background-color: radial-gradient(
+    #ffe4ea,
+    rgba(255, 255, 255, 0.8),
+    rgba(230, 210, 255, 0.9),
+    rgba(200, 225, 255, 0.9),
+    rgba(180, 210, 255, 0.9),
+    rgba(210, 190, 240, 0.9)
+  );
+  --navbar-color: linear-gradient(
+    to right,
+    rgba(235, 215, 255, 0.8),
+    rgba(210, 190, 255, 0.8),
+    rgba(190, 210, 255, 0.8),
+    rgba(170, 190, 255, 0.8)
+  );
+  --button-color-gradient: linear-gradient(
+    to right,
+    rgba(100, 70, 150, 0.9), /* Гүн ягаан */
+    rgba(80, 50, 130, 0.9),  /* Хар ягаан өнгө */
+    rgba(60, 40, 110, 0.9),  /* Цэнхэр ягаан өнгө */
+    rgba(40, 30, 90, 0.9)    /* Гэрэл ягаан */
+  );
+
+  --button-color: rgb(115, 80, 190); /* Тод ягаан */
+  --background-secondary-color: #ebe0e0d9;
+  --text-color-primary: black;
+  --text-color-secondary: white;
+  --text-color-muted: gray;
+  --text-font-weight: 700;
+  --text-font-paragraph: 600;
+  --font-size-muted: 0.8rem;
+  --font-size-title: 1.5rem;
+  --button-font-size: 1rem;
+  --input-color: rgb(254, 144, 214);
+  --article-background-color: white;
+  --font-size-paragraph: 1.5rem;
+  --white-bg-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px;
+  --font-family: "Lobster", cursive;
+}

@@ -19,6 +19,7 @@ export default class Data {
     return this.data;
   }
   getSalonDataById(id) {
+    console.log(id);
     return this.data.salons.find((item) => item.id == id);
   }
 }
